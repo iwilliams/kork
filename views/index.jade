@@ -1,7 +1,5 @@
-html
-  head
-  body
-    h1= title
-    ul
-      each user in users
-        li= user.name
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
