@@ -1,0 +1,7 @@
+include includes/post
+extends layout
+
+block content
+  h1(style='text-decoration:underline')= title
+  each post in posts
+    +post(post)
