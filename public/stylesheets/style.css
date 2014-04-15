@@ -1,8 +1,56 @@
 body {
-  padding: 50px;
+  padding: 10px 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #292929;
 }
 
 a {
   color: #00B7FF;
+}
+
+.board-1 {background: #FF3D3D;}
+.board-2 {background: #3CA63C;}
+.board-3 {background: #4646F1;}
+.board-4 {background: #D3A33C;}
+.board-5 {background: #8D52AD;}
+.board-6 {background: #2FCAC4;}
+.board-7 {background: #CF1174;}
+.board-8 {background: #559700;}
+.board-9 {background: #100370;}
+.board-10 {background: #774646;}
+
+#active-boards {
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 0;
+}
+
+#active-boards h1 {
+  float: left;
+  display: block;
+  margin: 0 10px 0 0;  
+  color: #FFFFFF;
+  transition: opacity .5s, margin-left 2s;
+}
+
+#active-boards h1[class*="board-"] {
+  padding: 1px 5px;
+  border-radius: 6px;
+}
+
+#active-boards h1[class*="board-"]:before {
+  content: "\f067";
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
+  font-size: .6em;
+}
+
+#active-boards h1[class*="board-"]:hover {
+  cursor: pointer;
+}
+
+#active-boards h1[class*="board-"]:hover:before {
+  content: "\f068";
 }
