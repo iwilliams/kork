@@ -27,8 +27,14 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+app.all('*', function(req, res, next) {
+  console.log(req.headers);
+  next();
+});
+
 app.get('/', routes.index);
-app.get('/users', user.list);
+app.get('/users', user.listAll);
+app.get('/user/:name', user.list);
 app.get('/posts', post.list);
 
 http.createServer(app).listen(app.get('port'), function(){
