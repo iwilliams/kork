@@ -1,5 +1,6 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  input(id='board-search' type='text' placeholder='Search Boards')
+  script(type='text/javascript').
+    $( "#board-search" ).autocomplete({ source: [ "c++", "java", "php", "coldfusion", "javascript", "asp", "ruby" ] });
