@@ -54,3 +54,21 @@ a {
 #active-boards h1[class*="board-"]:hover:before {
   content: "\f068";
 }
+
+.post {
+  margin: 10px 0;
+  display: block;
+  width: 40%;
+  border-radius: 6px;
+  box-sizing: border-box;
+  padding: 1%;
+  background: #FF3D3D;
+}
+
+.post:first-child {
+  margin-top: 0;
+}
+
+.post:last-child {
+  margin-bottom: 0;
+}

@@ -5,31 +5,4 @@ block content
   input(id='board-add' type='submit' value='Add')
   #active-boards
     h1= "No boards selected"
-  script(type='text/javascript').
-    var boardNumber = 1;
-    function addBoard() {
-      var activeBoards = $('#active-boards h1').eq(0).html();
-      if(activeBoards === "No boards selected"){
-        $('#active-boards').html("");
-      }
-      $('#active-boards').append('<h1 class="board-' + boardNumber  + '" >' + $('#board-search')[0].value + '</h1>');
-      $('#active-boards h1').on('click', function() {
-        $(this).animate(
-          {
-            opacity: '0'
-          },
-          200
-        );
-
-      });
-      boardNumber++;
-      $('#board-search')[0].value = "";
-    };
-    $('#board-search').autocomplete({source: ["videogames", "darksouls", "pics", "random", "programming", "shelby", "mtg"]});
-    $('#board-search').keypress(function(event){
-      if ( event.which == 13 ) {
-        event.preventDefault();
-        addBoard();
-      }
-    });
-    $('#board-add').on('click', addBoard);
+  #post-holder
