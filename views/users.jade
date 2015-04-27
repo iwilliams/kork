@@ -1,7 +1,0 @@
-include includes/user
-extends layout
-
-block content
-  h1(style='text-decoration:underline')= title
-  each user in users
-    +user(user)

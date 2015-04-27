@@ -1,0 +1,21 @@
+{{outlet}}
+<hr>
+<br>
+{{#each post in this.model}}
+  <img src="{{post.embed.image}}">
+  <br>
+  <h2>{{post.title}}</h2>
+  <br>
+  <ul>
+  {{#each comment in post.comments}}
+    <li>
+      {{comment.content}}
+      <br>
+      <img src="{{comment.embed.image}}">
+      <br>
+      <br>
+    </li>
+  {{/each}}
+  </ul>
+  <br>
+{{/each}}
